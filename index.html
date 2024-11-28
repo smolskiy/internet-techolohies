@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Мой сайт</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+	<!-- Канвас для анимации -->
+
+	<!-- Контент профиля -->
+	<div class="profile">
+		<img src="myphoto.jpg" alt="Моя фотография" class="profile-photo">
+		<div class="profile-data">
+			<h1>Имя Фамилия</h1>
+			<p>Профессия: Веб-разработчик</p>
+			<p>Email: example@example.com</p>
+		</div>
+	</div>
+</header>
+
+
+
+<nav>
+	<ul class="menu">
+		<li><a href="#" onclick="loadContent('home.html', this)" class="active">Главная</a></li>
+		<li><a href="#" onclick="loadContent('about.html', this)">Обо мне</a></li>
+		<li><a href="#" onclick="loadContent('bio.html', this)">Биография</a></li>
+		<li><a href="#" onclick="loadContent('projects.html', this)">Проекты</a></li>
+		<li><a href="#" onclick="loadContent('contacts.html', this)">Контакты</a></li>
+	</ul>
+</nav>
+
+<main id="content">
+	<h2>Добро пожаловать!</h2>
+	<p>Здесь будет отображаться содержимое страниц.</p>
+</main>
+<script src="scripts.js"></script>
+</body>
+</html>

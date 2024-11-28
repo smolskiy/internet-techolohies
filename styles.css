@@ -1,0 +1,182 @@
+/* Основные стили для body и html */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #222629; /* Основной фон сайта */
+    color: #f5f5f5; /* Цвет текста */
+}
+
+/* Стили для header */
+header {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    text-align: center;
+    z-index: 1;
+}
+
+/* Стили для canvas-анимации */
+.canvas-animation {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    margin: 0;
+    overflow: hidden;
+    background-color: #474b4f; /* Цвет фона для канваса */
+    cursor: none;
+}
+
+/* Стили для профиля */
+.profile {
+    z-index: 2;
+    display: flex;
+    align-items: center;
+}
+
+.profile-photo {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 4px solid #86c232; /* Акцентный цвет для рамки */
+    margin-bottom: 15px;
+}
+
+.profile-data h1 {
+    font-size: 24px;
+    color: #86c232; /* Заголовок профиля */
+}
+
+.profile-data p {
+    color: #6b6e70; /* Второстепенный текст */
+}
+
+/* Стили для навигационного меню */
+/* Стили для навигационного меню */
+/* Стили для навигационного меню */
+nav {
+    background: linear-gradient(to top, #222629, #474b4f); /* Градиент на весь фон меню */
+    border-bottom: 2px solid #61892f; /* Сплошная линия под меню */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Тень под меню */
+}
+
+/* Стили для списка меню */
+.menu {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+/* Стили для элементов списка */
+.menu li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Стили для ссылок */
+.menu a {
+    display: block;
+    padding: 15px 20px;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+    transition: all 0.3s ease; /* Плавные переходы */
+}
+
+/* Псевдоэлемент для подчеркивания под ссылкой */
+.menu a::after {
+    content: "";
+    display: block;
+    width: 0; /* Начальное состояние – линия невидима */
+    height: 3px;
+    background: #86c232; /* Цвет линии при активации или наведении */
+    position: absolute;
+    bottom: -5px; /* Расположение линии */
+    left: 0;
+    transition: width 0.3s ease; /* Плавное расширение */
+}
+
+/* Подсвечивание линии при наведении */
+.menu a:hover::after {
+    width: 100%; /* Линия растягивается на всю ширину */
+}
+
+/* Стили для активной ссылки */
+.menu a.active::after {
+    width: 100%; /* Линия сразу видима для активной ссылки */
+    background: #61892f; /* Цвет активной линии */
+}
+
+/* Плавное изменение цвета текста при наведении */
+.menu a:hover {
+    color: #86c232;
+}
+
+/* Стили для активной ссылки */
+.menu a.active {
+    color: #86c232;
+}
+
+
+/* Дополнительное оформление для плавности */
+.menu a:active {
+    transform: scale(0.98); /* Эффект нажатия */
+}
+
+
+/* Стили для основного контента */
+main {
+    margin: 0 auto;
+    max-width: 1600px;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+    padding: 20px;
+    background-color: #474b4f; /* Фон основного контента */
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Стили заголовков и текста в main */
+main h2 {
+    color: #86c232;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+main p {
+    color: #f5f5f5;
+    line-height: 1.6;
+}
+
+/* Стили для кнопок и ссылок */
+button, a.button {
+    background-color: #61892f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover, a.button:hover {
+    background-color: #86c232;
+}
+
+/* Стили для футера */
+footer {
+    text-align: center;
+    padding: 15px;
+    background-color: #474b4f;
+    color: #6b6e70;
+    font-size: 14px;
+}
