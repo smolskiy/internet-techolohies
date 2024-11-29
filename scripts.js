@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function() {
-    loadContent('home.html', document.querySelector('.menu li a.active'));
+    loadContent('resume.html', document.querySelector('.menu li a.active'));
 });
 
 function loadContent(page, element) {
