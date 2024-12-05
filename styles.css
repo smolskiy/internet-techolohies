@@ -1,5 +1,6 @@
 /* Основные стили для body и html */
 body, html {
+    overflow-x: hidden;
     margin: 0;
     padding: 0;
     height: 100%;
@@ -11,11 +12,14 @@ body, html {
 /* Стили для header */
 header {
     width: 100%;
-    height: 200px;
+    max-width: 1600px;
+    justify-self: center;
+    padding: 15px;
+    height: 280px;
     display: flex;
+    gap: 20px;
     align-items: center;
     background-color: transparent;
-    text-align: center;
     z-index: 1;
 }
 
@@ -34,13 +38,12 @@ header {
 .profile {
     z-index: 2;
     display: flex;
-    align-items: center;
 }
 
 .profile-photo {
-    border-radius: 50%;
-    width: 150px;
-    height: 150px;
+    width: 190px;
+    height: 250px;
+    margin-right: 20px;
     object-fit: cover;
     border: 4px solid #86c232; /* Акцентный цвет для рамки */
     margin-bottom: 15px;
@@ -52,13 +55,13 @@ header {
 }
 
 .profile-data p {
-    color: #6b6e70; /* Второстепенный текст */
+    color: #e7eff4; /* Второстепенный текст */
 }
 
-/* Стили для навигационного меню */
-/* Стили для навигационного меню */
-/* Стили для навигационного меню */
 nav {
+    position: sticky;
+    z-index: 100;
+    top: 0;
     background: linear-gradient(to top, #222629, #474b4f); /* Градиент на весь фон меню */
     border-bottom: 2px solid #61892f; /* Сплошная линия под меню */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Тень под меню */
@@ -184,9 +187,11 @@ footer {
 ol {
     margin: 20px 0;
 }
+
 ol li {
     margin: 10px 0;
 }
+
 .subsection {
     margin-left: 20px;
     font-style: italic;
@@ -223,4 +228,119 @@ a::after {
 /* Подсветка линии при наведении */
 a:hover::after {
     width: 100%; /* Линия растягивается на всю ширину при наведении */
+}
+
+.slider {
+    position: relative;
+    margin: auto;
+    justify-self: center;
+    width: 80%;
+    max-width: 600px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.slides {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.slide img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.navigation {
+    box-sizing: border-box;
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    padding: 0 20px;
+}
+
+.navigation button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.navigation button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.indicators {
+    position: absolute;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.indicator {
+    width: 12px;
+    height: 12px;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.indicator.active {
+    background-color: #61892f; /* Цвет активного индикатора */
+}
+
+.contact-container {
+    background-color: #ffffff;
+    padding: 20px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    text-align: center;
+}
+
+.contact-container h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #222629;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.contact-item a {
+    text-decoration: none;
+    font-size: 18px;
+    margin-left: 10px;
+    transition: color 0.3s;
+}
+
+.contact-item a:hover {
+    color: #61892f;
+}
+
+.contact-item svg {
+    width: 24px;
+    height: 24px;
+    fill:  #61892f;
+    transition: fill 0.3s;
+}
+
+.contact-item a:hover svg {
+    fill: #61892f;
 }
