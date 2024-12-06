@@ -148,6 +148,11 @@ main {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
 }
 
+div #maintext {
+    max-width: 1600px;
+    margin: auto;
+}
+
 /* Стили заголовков и текста в main */
 main h2 {
     color: #86c232;

@@ -1,4 +1,43 @@
-<div id="maintext">
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Мой сайт</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header>
+
+	<div class="profile">
+		<img src="assets/images/myphoto.jpg" alt="Моя фотография" class="profile-photo">
+		<div class="profile-data">
+			<h1>Смольский Валерий Русланович</h1>
+			<h3>Факультет: Факультет интеллектуальных систем и программирования</h3>
+			<h3>Кафедра: Кафедра прикладной математики и искусственного интеллекта</h3>
+			<h3>Тема выпускной работы:
+				«Разработка структуры и алгоритмической базы системы управления кадровым обеспечением муниципального
+				округа»</h3>
+
+			<h3>Научный руководитель: доцент кафедры ПМИИ
+				Прокопенко Елена Васильевна </h3>
+		</div>
+	</div>
+</header>
+
+
+<nav>
+	<ul class="menu">
+		<li><a href="resume.html" class="active">Резюме</a></li>
+		<li><a href="about.html"> Биография</a></li>
+		<li><a href="report.html">Реферат</a></li>
+		<li><a href="library.html">Библиотека</a></li>
+		<li><a href="references.html">Ссылки</a></li>
+		<li><a href="individual.html">Индивидуальный раздел</a></li>
+	</ul>
+</nav>
+
+<main id="content">
 	<h1>Краткое резюме магистра</h1>
 	<table id="resume">
 		<tr class="odd">
@@ -150,8 +189,7 @@
 			</td>
 		</tr>
 	</table>
-</div>
-
+</main>
 <!-- styles for table -->
 <style>
 	#resume {
@@ -189,3 +227,5 @@
 		background-color: rgba(97, 137, 47, 0.09); /* Highlight row on hover */
 	}
 </style>
+</body>
+</html>
