@@ -235,7 +235,7 @@ a:hover::after {
     margin: auto;
     justify-self: center;
     width: 80%;
-    max-width: 600px;
+    max-width: 700px;
     overflow: hidden;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
@@ -243,16 +243,23 @@ a:hover::after {
 
 .slides {
     display: flex;
+    align-items: center;
     transition: transform 0.5s ease-in-out;
 }
 
 .slide {
     min-width: 100%;
     transition: opacity 0.5s ease-in-out;
+    justify-content: center; /* Горизонтальное центрирование */
+    align-items: center;     /* Вертикальное центрирование */
 }
 
 .slide img {
-    width: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Сохраняет пропорции изображения и вписывает его внутрь слайда */
+    display: block;
+    margin: auto;
     border-radius: 10px;
 }
 
